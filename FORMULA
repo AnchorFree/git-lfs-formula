@@ -1,0 +1,7 @@
+name: git-lfs
+os: CentOS, Fedora
+os_family: RedHat
+version: 201603
+release: 1
+summary: Formula for installing Git LFS
+description: Formula for installing the Git LFS client

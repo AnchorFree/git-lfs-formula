@@ -1,0 +1,6 @@
+CentOS:
+  gitlfs:
+    repo: https://packagecloud.io/github/git-lfs/el/$releasever/$basearch
+Fedora:
+  gitlfs:
+    repo: https://packagecloud.io/github/git-lfs/fedora/$releasever/$basearch

@@ -1,0 +1,4 @@
+{% import_yaml 'git-lfs/os_map.yaml' as os_map %}
+{% set default_settings = salt['grains.filter_by'](os_map, grain='os') %}
+
+{% set gitlfs = salt['pillar.get']('gitlfs', default=default_settings.get('gitlfs'), merge=True) %}

@@ -1,0 +1,26 @@
+driver:
+  name: docker
+
+platforms:
+  - name: centos-7
+    driver_config:
+      image: corux/centos7-salt
+  - name: fedora
+
+provisioner:
+  name: salt_solo
+  formula: git-lfs
+  pillars-from-files:
+    git-lfs.sls: pillar.example
+  pillars:
+    top.sls:
+      base:
+        "*":
+          - git-lfs
+  state_top:
+    base:
+      "*":
+        - git-lfs
+
+suites:
+  - name: default
